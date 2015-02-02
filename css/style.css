@@ -1,0 +1,127 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+html, body {
+	height: 100%;
+}
+
+.disclaimer {
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	font-size: 25px;
+	line-height: 30px;
+	color: black;
+	top: 0;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.disclaimer:hover {
+	background: rgba(100, 65, 165, 0.7);
+	color: white;
+}
+
+.disclaimer:hover  ~ #buttonContainer  a.twitch {
+	background: url('../img/twitch.svg') no-repeat #6441A5;
+	background-position: -20px -20px;
+	background-size: 200px 200px;
+}
+
+#wrapper {
+	font-family: 'Pacifico', cursive;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.me1 {
+	background: url('../img/me.jpg') no-repeat center center fixed; 
+}
+.me2 {
+	background: url('../img/me2.jpg') no-repeat center center fixed; 
+}
+.me3 {
+	background: url('../img/me3.jpg') no-repeat center center fixed; 
+}
+
+#streaming {
+	width: 378px;
+	height: 620px;
+	position: absolute;
+	left: 50%;
+	margin-left: -277px;
+	top: 20px;
+}
+
+h1 {
+	color: white;
+	font-size: 160px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	position: absolute;
+	bottom: 200px;
+	text-shadow: 0 0 15px #3D3D3D;
+}
+
+#buttonContainer {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -260px;
+}
+
+#buttonContainer a {
+	display: inline-block;
+	width: 160px;
+	height: 160px;
+	background-position: -20px -20px;
+	background-size: 200px 200px;
+	text-indent: -99999px;
+	border-radius: 180px;
+	margin-right: 20px;
+	
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-ms-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	transition: background 1s ease;
+}
+
+#buttonContainer a:hover {
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-ms-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	transition: background 1s ease;
+}
+
+
+.twitter {
+	background: url('../img/twitter.svg') no-repeat;
+}
+
+.linkedin {
+	background: url('../img/linkedin.svg') no-repeat;
+}
+
+.twitch {
+	background: url('../img/twitch.svg') no-repeat;
+}
+
+.twitter:hover{
+	background: url('../img/twitter.svg') no-repeat #55ACEE;
+}
+
+.linkedin:hover {
+	background: url('../img/linkedin.svg') no-repeat #007bb6;
+}
+
+.twitch:hover {
+	background: url('../img/twitch.svg') no-repeat #6441A5;
+}
