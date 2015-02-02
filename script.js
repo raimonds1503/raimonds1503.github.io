@@ -4,20 +4,16 @@ $(document).ready(function() {
 	$('#wrapper').addClass('me' + random);
 	
 	//Random hover color
-	$('h1').animate({
-			color: getRandomColor()
-		}, 3000);
+	animateLogo();
 	setInterval(function() {
-		console.log("animating");
-		$('h1').animate({
-			color: getRandomColor()
-		}, 3000);
+		animateLogo();
 	}, 5000);
 	
 	//Is streaming?
-	$.get("https://api.twitch.tv/kraken/channels/drraylv", function(data) {
-		console.log(JSON.decode(data));
-	});
+	checkOnlineStatus();
+	setInterval(function() {
+		checkOnlineStatus();
+	}, 10000);
 });
 
 function getRandomColor() {
@@ -31,4 +27,24 @@ function getRandomColor() {
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function checkOnlineStatus() {
+	$.ajax({
+		url: "https://api.twitch.tv/kraken/streams/drraylv",
+		dataType: "jsonp",
+		success: function (data) {
+			if(data.stream != null) {
+				$('.disclaimer').fadeIn('slow');
+			} else {
+				$('.disclaimer').fadeOut('slow');
+			}
+		}
+	});
+}
+
+function animateLogo() {
+	$('h1').animate({
+		color: getRandomColor()
+	}, 3000);
 }
